@@ -183,11 +183,9 @@ bindsym $mod+minus move scratchpad
 bindsym $mod+plus scratchpad show
 for_window [instance="gnome-terminal"] floating enable
 
-exec --no-startup-id export GTK_IM_MODULE=ibus
-exec --no-startup-id export XMODIFIERS=@im=ibus
-exec --no-startup-id export QT_IM_MODULE=ibus
 exec --no-startup-id ibus-daemon --xim -d -r
 exec --no-startup-id xmodmap ~/.xmodmap
+exec --no-startup-id xinput --set-prop "Elan Touchpad" "Device Enabled" 0
 
 new_window none
 new_float normal
