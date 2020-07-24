@@ -7,6 +7,8 @@
 # invoke global X session script
 #. /etc/X11/Xsession
 
+xinput disable "Elan Touchpad"
+
 export GTK_IM_MODULE=xim
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=xim
